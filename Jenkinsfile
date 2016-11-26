@@ -1,6 +1,6 @@
 #!groovy
 
-stage name: 'Start Sample Stage'
-
-echo 'Hello World from pipeline! one'
-
+stage name: 'Using docker'
+docker.image('maven:3.3.3-jdk-8').inside {
+  echo "Hello docker"
+}
